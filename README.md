@@ -58,7 +58,7 @@ This study evaluated the feasibility of using wearable devices to detect early p
 To ensure scalable and efficient querying across large physiological datasets, the following advanced PostgreSQL techniques were applied:
 
 - **Indexes:**  
-  - B-tree and composite indexes on `patient_id`, `timestamp`, and `glucose_level`  
+  - Composite indexes on `patient_id`, `timestamp`  
   - Dramatically improved query speed for time-series joins and alert triggers
 
 - **Common Table Expressions (CTEs):**  
@@ -66,11 +66,11 @@ To ensure scalable and efficient querying across large physiological datasets, t
   - Enabled reusable glucose window calculations and biomarker aggregations
 
 - **Range Partitioning:**  
-  - Applied to `dexcom` and `hr` tables based on `timestamp` ranges  
+  - Applied to foodlog table as it has two different year data's for patient
   - Reduced scan time and improved performance for hourly/daily summaries
 
 - **Stored Procedures & Triggers:**  
-  - Automated alert generation for abnormal glucose or physiological spikes  
+  - Automated alert generation for abnormal glucose or physiological spikes or high risk Foodlog entry  
   - Enabled real-time updates to summary tables and patient flags
 
 - **Materialized Views:**  
