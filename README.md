@@ -1,4 +1,4 @@
-# 🧬 Wearable Biomarkers for Prediabetes Detection | PostgreSQL Project
+# 🧬Glycemic Variability Analysis | PostgreSQL Project
 
 ## 🔗 Data Source  
 [PhysioNet: BIG IDEAs Lab Glycemic Variability and Wearable Device Data (v1.1.2)](https://physionet.org/content/big-ideas-glycemic-wearable/1.1.2/)
